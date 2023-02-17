@@ -267,76 +267,9 @@ void accuracy_bsw_blw() {
 }
 
 int main() {
-    //accuracy_efficiency_nonstiff_dimer();
-    //accuracy_efficiency_schlogl();
-    //scale_MAPK();
+    accuracy_efficiency_nonstiff_dimer();
+    accuracy_efficiency_schlogl();
+    scale_MAPK();
     accuracy_bsw_blw();
-#if 0
-    std::vector<std::string> ms;
-    //ms.emplace_back("DM");
-    //ms.emplace_back("RSSA");
-    // ms.emplace_back("RNRM");
-    // ms.emplace_back("RLEAP");
-    // ms.emplace_back("ILEAP");
-    // ms.emplace_back("TLEAP");
-    //ms.emplace_back("BARSSA");
-    // ms.emplace_back("NBWLEAP");
-    // ms.emplace_back("BSWLEAP");
-    // ms.emplace_back("BLWLEAP");
-    // ms.emplace_back("BTWLEAP");
-    ms.emplace_back("ADAPTLEAP");
-    const std::string model1 = "birth_death";
-    const std::string model2 = "isomerization";
-    const std::string model3 = "sequence";
-    const std::string model4 = "schlogl";
-    const std::string model5 = "dimer";
-    const std::string model6 = "stiffdimer";
-    const std::string model10 = "MAPK";
-    ParameterDict p;
-    p.methods = ms;
-    p.end_time = 999.9; 
-    p.leap_time_interval = p.end_time / 100; 
-    p.state_delta = 0.01; 
-    p.tau_epsilon = 0.001;
-    p.ba_alpha = 0.6;
-    p.bound_weight = 0.93;
-    //test(model1, p);
-    p.end_time = 99.99;
-    //test(model2, p);
-    p.end_time = 0.0999;
-    //test(model3, p);
-    p.end_time = 9.999;
-    p.state_delta = 0.05;
-    p.tau_epsilon = 0.3;
-    p.ba_alpha = 0.6;
-    std::vector<std::string> a {"0.99", "0.97", "0.95", "0.93", "0.9", "0.8", "0.7", "0.6", "0.5"};
-    for (std::string& x : a) {
-        std::cout << "bw = " << x << std::endl;
-        p.bound_weight = std::stod(x);
-        test(model4, p);
-        std::string command = "cp ../data/*schlogl-adaptleap* -t ../data/adapt_" + x;
-        std::system(command.c_str());
-    }
-    p.bound_weight = 0.97;
-    // test(model4, p);
-    p.end_time = 10;
-    p.state_delta = 0.01;
-    p.leap_time_interval = p.end_time / 100;
-    //test(model5, p);
-    //test(model6, p);
-    p.end_time = 0.5;
-    p.state_delta = 0.005; 
-    p.leap_time_interval = 1e-4;
-
-    //test(model10, p);
-    //const std::string model5 = "lotka";
-    //const std::string model6 = "ARF";
-    const std::string model7 = "gene_expression";
-    const std::string model8 = "yeast_polarization";
-    const std::string model9 = "abc_cycle";
-    const std::string model11 = "MAPK296";
-    const std::string model12 = "FceRI";
-    const std::string model13 = "GAL";
-#endif
 }
 
