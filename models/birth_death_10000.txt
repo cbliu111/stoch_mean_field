@@ -1,0 +1,17 @@
+// @article{erban_practical_nodate,
+// 	title = {A {PRACTICAL} {GUIDE} {TO} {STOCHASTIC} {SIMULATIONS} {OF} {REACTION}-{DIFFUSION} {PROCESSES}},
+// 	abstract = {A practical introduction to stochastic modelling of reaction-diﬀusion processes is presented. No prior knowledge of stochastic simulations is assumed. The methods are explained using illustrative examples. The article starts with the classical Gillespie algorithm for the stochastic modelling of chemical reactions. Then stochastic algorithms for modelling molecular diﬀusion are given. Finally, basic stochastic reaction-diﬀusion methods are presented. The connections between stochastic simulations and deterministic models are explained and basic mathematical tools (e.g. chemical master equation) are presented. The article concludes with an overview of more advanced methods and problems.},
+// 	pages = {35},
+// 	journaltitle = {{DIFFUSION} {PROCESSES}},
+// 	author = {Erban, Radek and Chapman, S Jonathan and Maini, Philip K},
+// 	langid = {english},
+// 	file = {Erban et al. - A PRACTICAL GUIDE TO STOCHASTIC SIMULATIONS OF REA.pdf:/home/cbl/Documents/1_constant_time_stochastic_simulation/3_draft/Zotero/storage/QPVQWN6L/Erban et al. - A PRACTICAL GUIDE TO STOCHASTIC SIMULATIONS OF REA.pdf:application/pdf},
+// }
+# init
+A = 0
+# reaction
+1 A --> NULL : 1e-1
+NULL --> 1 A : 1
+# end
+time = 10000
+steps = 0

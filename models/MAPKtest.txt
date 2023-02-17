@@ -1,0 +1,36 @@
+# init
+E1 = 1600000
+E2 = 1600000
+K = 24344
+Kp = 1964282
+Kpp = 158011374
+Kpase = 1600000
+KK = 5314935
+KKp = 26051069
+KKpase = 1600000
+KKpp = 128633996
+KKK = 8042911
+KKKp = 7957089
+# reactions
+1 KKK 1 E1 --> 1 KKKp 1 E1 : 0.0001
+1 KKKp 1 E2 --> 1 KKK 1 E2 : 0.0001
+1 KK 1 KKKp --> 1 KKp 1 KKKp : 0.0001
+1 KKp 1 KKpase --> 1 KK 1 KKpase : 0.0001
+1 KKp 1 KKKp --> 1 KKpp 1 KKKp : 0.0001
+1 KKpp 1 KKpase --> 1 KKp 1 KKpase : 0.0001
+1 K 1 KKpp --> 1 Kp 1 KKpp : 0.0001
+1 Kp 1 Kpase --> 1 K 1 Kpase : 0.0001
+1 Kp 1 KKpp --> 1 Kpp 1 KKpp : 0.0001
+1 Kpp 1 Kpase --> 1 Kp 1 Kpase : 0.0001
+# end
+time = 0.5
+steps = 0
+
+
+
+
+
+
+
+
+

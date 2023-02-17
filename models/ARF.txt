@@ -1,0 +1,36 @@
+// @article{erban_practical_nodate,
+// 	title = {A {PRACTICAL} {GUIDE} {TO} {STOCHASTIC} {SIMULATIONS} {OF} {REACTION}-{DIFFUSION} {PROCESSES}},
+// 	abstract = {A practical introduction to stochastic modelling of reaction-diﬀusion processes is presented. No prior knowledge of stochastic simulations is assumed. The methods are explained using illustrative examples. The article starts with the classical Gillespie algorithm for the stochastic modelling of chemical reactions. Then stochastic algorithms for modelling molecular diﬀusion are given. Finally, basic stochastic reaction-diﬀusion methods are presented. The connections between stochastic simulations and deterministic models are explained and basic mathematical tools (e.g. chemical master equation) are presented. The article concludes with an overview of more advanced methods and problems.},
+// 	pages = {35},
+// 	journaltitle = {{DIFFUSION} {PROCESSES}},
+// 	author = {Erban, Radek and Chapman, S Jonathan and Maini, Philip K},
+// 	langid = {english},
+// 	file = {Erban et al. - A PRACTICAL GUIDE TO STOCHASTIC SIMULATIONS OF REA.pdf:/home/cbl/Documents/1_constant_time_stochastic_simulation/3_draft/Zotero/storage/QPVQWN6L/Erban et al. - A PRACTICAL GUIDE TO STOCHASTIC SIMULATIONS OF REA.pdf:application/pdf},
+// }
+# init
+p53 = 5
+Mdm2 = 5
+p53-Mdm2 = 95
+Mdm2_mRNA = 0
+IR = 0
+damDNA = 0
+ARF = 0
+ARF-Mdm2 = 0
+# reaction
+NULL --> 1 p53 : 7.8e-2
+1 p53 1 Mdm2 --> 1 p53-Mdm2 : 1.155e-3
+1 p53-Mdm2 --> 1 p53 1 Mdm2 : 1.155e-5
+1 p53-Mdm2 --> 1 Mdm2 : 8.25e-4
+1 p53 --> 1 Mdm2_mRNA 1 p53 : 1e-4
+1 Mdm2_mRNA --> NULL : 1e-4
+1 Mdm2_mRNA --> 1 Mdm2 1 Mdm2_mRNA : 4.95e-4
+1 Mdm2 --> NULL : 4.33e-4
+1 IR --> 1 damDNA 1 IR : 8e-2
+1 damDNA --> NULL : 2e-5
+1 damDNA --> 1 ARF 1 damDNA : 3.3e-5
+1 ARF 1 Mdm2 --> 1 ARF-Mdm2 : 1e-2
+1 ARF --> NULL : 1e-4
+1 ARF-Mdm2 --> 1 ARF : 1e-3
+# end
+time = 1000000
+steps = 0

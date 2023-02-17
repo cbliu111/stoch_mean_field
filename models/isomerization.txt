@@ -1,0 +1,25 @@
+// @article{cao_numerical_2004,
+// 	title = {The numerical stability of leaping methods for stochastic simulation of chemically reacting systems},
+// 	volume = {121},
+// 	issn = {00219606},
+// 	url = {http://scitation.aip.org/content/aip/journal/jcp/121/24/10.1063/1.1823412},
+// 	doi = {10.1063/1.1823412},
+// 	pages = {12169},
+// 	number = {24},
+// 	journaltitle = {The Journal of Chemical Physics},
+// 	shortjournal = {J. Chem. Phys.},
+// 	author = {Cao, Yang and Petzold, Linda R. and Rathinam, Muruhan and Gillespie, Daniel T.},
+// 	urldate = {2022-06-20},
+// 	date = {2004},
+// 	langid = {english},
+// 	file = {Cao et al. - 2004 - The numerical stability of leaping methods for sto.pdf:/home/cbl/Documents/1_constant_time_stochastic_simulation/3_draft/Zotero/storage/X4NTMS2G/Cao et al. - 2004 - The numerical stability of leaping methods for sto.pdf:application/pdf},
+// }
+# init
+S1 = 100
+S2 = 100
+# reaction
+1 S1 --> 1 S2 : 0.1
+1 S2 --> 1 S1 : 0.1
+# end
+time = 10
+steps = 0

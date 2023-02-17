@@ -1,0 +1,36 @@
+# init
+E1 = 400000
+E2 = 400000
+K = 40000000
+Kp = 0
+Kpp = 0
+Kpase = 400000
+KK = 40000000
+KKp = 0
+KKpase = 400000
+KKpp = 0
+KKK = 4000000
+KKKp = 0
+# reactions
+1 KKK 1 E1 --> 1 KKKp 1 E1 : 0.0001
+1 KKKp 1 E2 --> 1 KKK 1 E2 : 0.0001
+1 KK 1 KKKp --> 1 KKp 1 KKKp : 0.0001
+1 KKp 1 KKpase --> 1 KK 1 KKpase : 0.0001
+1 KKp 1 KKKp --> 1 KKpp 1 KKKp : 0.0001
+1 KKpp 1 KKpase --> 1 KKp 1 KKpase : 0.0001
+1 K 1 KKpp --> 1 Kp 1 KKpp : 0.0001
+1 Kp 1 Kpase --> 1 K 1 Kpase : 0.0001
+1 Kp 1 KKpp --> 1 Kpp 1 KKpp : 0.0001
+1 Kpp 1 Kpase --> 1 Kp 1 Kpase : 0.0001
+# end
+time = 0.5
+steps = 0
+
+
+
+
+
+
+
+
+

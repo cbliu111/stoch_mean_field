@@ -1,0 +1,122 @@
+# init
+mRNAPrecusor = 10 : constant
+ProteinPrecusor = 10 : constant
+G1gene = 1
+G1gene-(G4p)2 = 0
+G1gene-(G4p)2-(G80p)2 = 0
+G1gene-(G4p)2-(G80p)2-(G3pa)2 = 1
+G1gene-(G4p)2-(G80p)2-(G1pa)2 = 0
+G1mRNA = 0
+G1p = 1
+G1pa = 0
+(G1pa)2 = 0
+G3gene = 2
+G3gene-(G4p)2 = 0
+G3gene-(G4p)2-(G80p)2 = 0
+G3gene-(G4p)2-(G80p)2-(G3pa)2 = 0
+G3gene-(G4p)2-(G80p)2-(G1pa)2 = 0
+G3mRNA = 0
+G3p = 0
+G3pa = 0
+(G3pa)2 = 0
+G80gene = 0
+G80gene-(G4p)2 = 0
+G80gene-(G4p)2-(G80p)2 = 0
+G80gene-(G4p)2-(G80p)2-(G3pa)2 = 0
+G80gene-(G4p)2-(G80p)2-(G1pa)2 = 0
+G80mRNA = 0
+G80p = 0
+(G80p)2 = 0
+G4gene = 0
+G4gene-(G4p)2 = 0
+G4gene-(G4p)2-(G80p)2 = 0
+G4gene-(G4p)2-(G80p)2-(G3pa)2 = 0
+G4gene-(G4p)2-(G80p)2-(G1pa)2 = 0
+G4mRNA = 0
+G4p = 0
+(G4p)2 = 0
+gala = 1 : constant
+# reactions
+1 G1gene + 1 mRNAPrecusor --> 1 G1gene + 1 G1mRNA : 1.042
+1 G3gene + 1 mRNAPrecusor --> 1 G3gene + 1 G3mRNA : 0.329
+1 G80gene + 1 mRNAPrecusor --> 1 G80gene + 1 G80mRNA : 0.147
+1 G4gene + 1 mRNAPrecusor --> 1 G4gene + 1 G4mRNA : 1
+1 G1gene-(G4p)2 + 1 mRNAPrecusor --> 1 G1gene-(G4p)2 + 1 G1mRNA : 1.042
+1 G3gene-(G4p)2 + 1 mRNAPrecusor --> 1 G3gene-(G4p)2 + 1 G3mRNA : 0.329
+1 G80gene-(G4p)2 + 1 mRNAPrecusor --> 1 G80gene-(G4p)2 + 1 G80mRNA : 0.147
+1 G4gene-(G4p)2 + 1 mRNAPrecusor --> 1 G4gene-(G4p)2 + 1 G4mRNA : 1
+1 G1gene-(G4p)2-(G80p)2 + 1 mRNAPrecusor --> 1 G1gene-(G4p)2-(G80p)2 + 1 G1mRNA
+1 G3gene-(G4p)2-(G80p)2 + 1 mRNAPrecusor --> 1 G3gene-(G4p)2-(G80p)2 + 1 G3mRNA
+1 G80gene-(G4p)2-(G80p)2 + 1 mRNAPrecusor --> 1 G80gene-(G4p)2-(G80p)2 + 1 G80mRNA
+1 G4gene-(G4p)2-(G80p)2 + 1 mRNAPrecusor --> 1 G4gene-(G4p)2-(G80p)2 + 1 G4mRNA
+1 G1gene-(G4p)2-(G80p)2-(G3pa)2 + 1 mRNAPrecusor --> 1 G1gene-(G4p)2-(G80p)2-(G3pa)2 + 1 G1mRNA 
+1 G3gene-(G4p)2-(G80p)2-(G3pa)2 + 1 mRNAPrecusor --> 1 G3gene-(G4p)2-(G80p)2-(G3pa)2 + 1 G3mRNA 
+1 G80gene-(G4p)2-(G80p)2-(G3pa)2 + 1 mRNAPrecusor --> 1 G80gene-(G4p)2-(G80p)2-(G3pa)2 + 1 G80mRNA
+1 G4gene-(G4p)2-(G80p)2-(G3pa)2 + 1 mRNAPrecusor --> 1 G4gene-(G4p)2-(G80p)2-(G3pa)2 + 1 G4mRNA
+1 G1gene-(G4p)2-(G80p)2-(G1pa)2 + 1 mRNAPrecusor --> 1 G1gene-(G4p)2-(G80p)2-(G1pa)2 + 1 G1mRNA 
+1 G3gene-(G4p)2-(G80p)2-(G1pa)2 + 1 mRNAPrecusor --> 1 G3gene-(G4p)2-(G80p)2-(G1pa)2 + 1 G3mRNA 
+1 G80gene-(G4p)2-(G80p)2-(G1pa)2 + 1 mRNAPrecusor --> 1 G80gene-(G4p)2-(G80p)2-(G1pa)2 + 1 G80mRNA
+1 G4gene-(G4p)2-(G80p)2-(G1pa)2 + 1 mRNAPrecusor --> 1 G4gene-(G4p)2-(G80p)2-(G1pa)2 + 1 G4mRNA
+1 G1mRNA + 1 ProteinPrecusor --> 1 G1mRNA + 1 G1p 
+1 G3mRNA + 1 ProteinPrecusor --> 1 G3mRNA + 1 G3p 
+1 G80mRNA + 1 ProteinPrecusor --> 1 G80mRNA + 1 G80p
+1 G4mRNA + 1 ProteinPrecusor --> 1 G4mRNA + 1 G4p
+1 G1gene + 1 (G4p)2 --> 1 G1gene-(G4p)2 
+1 G1gene-(G4p)2 --> 1 G1gene + 1 (G4p)2 
+1 G3gene + 1 (G4p)2 --> 1 G3gene-(G4p)2
+1 G3gene-(G4p)2 --> 1 G3gene + 1 (G4p)2
+1 G80gene + 1 (G4p)2 --> 1 G80gene-(G4p)2 
+1 G80gene-(G4p)2 --> 1 G80gene + 1 (G4p)2
+1 G4gene + 1 (G4p)2 --> 1 G4gene-(G4p)2
+1 G4gene-(G4p)2 --> 1 G4gene + 1 (G4p)2
+1 G1gene-(G4p)2 + 1 (G80p)2 --> 1 G1gene-(G4p)2-(G80p)2
+1 G1gene-(G4p)2-(G80p)2 --> 1 G1gene-(G4p)2 + 1 (G80p)2 
+1 G3gene-(G4p)2 + 1 (G80p)2 --> 1 G3gene-(G4p)2-(G80p)2
+1 G3gene-(G4p)2-(G80p)2 --> 1 G3gene-(G4p)2 + 1 (G80p)2
+1 G80gene-(G4p)2 + 1 (G80p)2 --> 1 G80gene-(G4p)2-(G80p)2
+1 G80gene-(G4p)2-(G80p)2 --> 1 G80gene-(G4p)2 + 1 (G80p)2
+1 G4gene-(G4p)2 + 1 (G80p)2 --> 1 G4gene-(G4p)2-(G80p)2
+1 G4gene-(G4p)2-(G80p)2 --> 1 G4gene-(G4p)2 + 1 (G80p)2
+1 G1gene-(G4p)2-(G80p)2 + 1 (G3pa)2 --> 1 G1gene-(G4p)2-(G80p)2-(G3pa)2 
+1 G1gene-(G4p)2-(G80p)2-(G3pa)2 --> 1 G1gene-(G4p)2-(G80p)2 + 1 (G3pa)2
+1 G3gene-(G4p)2-(G80p)2 + 1 (G3pa)2 --> 1 G3gene-(G4p)2-(G80p)2-(G3pa)2 
+1 G3gene-(G4p)2-(G80p)2-(G3pa)2 --> 1 G3gene-(G4p)2-(G80p)2 + 1 (G3pa)2 
+1 G80gene-(G4p)2-(G80p)2 + 1 (G3pa)2 --> 1 G80gene-(G4p)2-(G80p)2-(G3pa)2
+1 G80gene-(G4p)2-(G80p)2-(G3pa)2 --> 1 G80gene-(G4p)2-(G80p)2 + 1 (G3pa)2
+1 G4gene-(G4p)2-(G80p)2 + 1 (G3pa)2 --> 1 G4gene-(G4p)2-(G80p)2-(G3pa)2
+1 G4gene-(G4p)2-(G80p)2-(G3pa)2 --> 1 G80gene-(G4p)2-(G80p)2 + 1 (G3pa)2
+1 G1gene-(G4p)2-(G80p)2-(G3pa)2 + 1 (G1pa)2 --> 1 (G3pa)2 + 1 G1gene-(G4p)2-(G80p)2-(G1pa)2
+1 (G3pa)2 + 1 G1gene-(G4p)2-(G80p)2-(G1pa)2 --> 1 G1gene-(G4p)2-(G80p)2-(G3pa)2 + 1 (G1pa)2
+1 G3gene-(G4p)2-(G80p)2-(G3pa)2 + 1 (G1pa)2 --> 1 (G3pa)2 + 1 G3gene-(G4p)2-(G80p)2-(G1pa)2
+1 (G3pa)2 + 1 G3gene-(G4p)2-(G80p)2-(G1pa)2 --> 1 G3gene-(G4p)2-(G80p)2-(G3pa)2 + 1 (G1pa)2
+1 G80gene-(G4p)2-(G80p)2-(G3pa)2 + 1 (G1pa)2 --> 1 (G3pa)2 + 1 G80gene-(G4p)2-(G80p)2-(G1pa)2
+1 (G3pa)2 + 1 G80gene-(G4p)2-(G80p)2-(G1pa)2 --> 1 G80gene-(G4p)2-(G80p)2-(G3pa)2 + 1 (G1pa)2
+1 G4gene-(G4p)2-(G80p)2-(G3pa)2 + 1 (G1pa)2 --> 1 (G3pa)2 + 1 G4gene-(G4p)2-(G80p)2-(G1pa)2
+1 (G3pa)2 + 1 G4gene-(G4p)2-(G80p)2-(G1pa)2 --> 1 G4gene-(G4p)2-(G80p)2-(G3pa)2 + 1 (G1pa)2
+2 G1pa --> 1 (G1pa)2
+1 (G1pa)2 --> 2 G1pa
+2 G3pa --> 1 (G3pa)2
+1 (G3pa)2 --> 2 G3pa
+2 G80p --> 1 (G80p)2
+1 (G80p)2 --> 2 G80p
+2 G4p --> 1 (G4p)2
+1 (G4p)2 --> 2 G4p
+1 G3p + 1 gala --> 1 G3pa
+1 G3pa --> 1 G3p + 1 gala
+1 G1p + 1 gala --> 1 G1pa
+1 G1pa --> 1 G1p + 1 gala
+1 G1mRNA --> 1 Null
+1 G1p --> 1 Null
+1 (G1pa)2 --> 1 Null
+1 G3mRNA --> 1 Null
+1 G3p --> 1 Null
+1 (G3pa)2 --> 1 Null
+1 G80mRNA --> 1 Null
+1 G80p --> 1 Null
+1 (G80p)2 --> 1 Null
+1 G4mRNA --> 1 Null
+1 G4p --> 1 Null
+1 (G4p)2 --> 1 Null
+# end
+time = 350
+steps = 0
